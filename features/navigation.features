@@ -1,0 +1,39 @@
+Feature: Navegação no fire tv 
+
+Scenario: Navegar pelo menu principal 
+  Give que o fire tv esta ligado no tela inicial 
+  When eu pressiono o botão "Seta para direita" no controle remoto
+  Then a seleção deve mover-se para o próximo item no menu
+
+Scenario: Acessar Configurações
+  Given que estou no menu principal do Fire TV
+  When eu navego até a opção "Configurações" e seleciono
+  Then a tela de Configurações deve ser exibida
+
+Scenario: Perfil do usuario 
+   Give que estou na menu principal do fire TV
+   When eu navego para a opção "Perfil" e seleciono
+   Then a tela de perfil deve ser exibida 
+
+Scenario: Baixar nova aplicativo 
+   Give que estou na menu principal do fire TV
+   When eu navego para a opção "Perfil" e seleciono
+   Then a tela de perfil deve ser exibida 
+
+Scenario: Acessar a Appstore para obter mais aplicativos
+  Given que o Fire TV está ligado e na tela inicial
+  When eu navego até a opção "Aplicativos" no menu principal
+  And eu seleciono "Obtenha mais aplicativos"
+  Then a Appstore deve ser exibida com uma lista de aplicativos compatíveis com o Fire TV
+
+Scenario: Acessar o Appstore pesquisa um aplicativo
+  Given que o fire tv está ligado e na tela inicial 
+  When eu navego até a opção "aplicativo" no meu menu
+  And eu seleciono "pesquisar" 
+  Then a tele exibe uma mensagem "precione SELECIONAR para pesquisae com o teclado ou mantenha o "botao microfone" do controle precionadopara fazer uma pesquisa de voz
+
+Scenario: Pesquisar por um aplicativo não compatível
+  Given que o Fire TV está ligado e na tela inicial
+  When eu navego até o campo de pesquisa
+  And eu procuro por "Instagram"
+  Then o aplicativo "Instagram" não deve ser encontrado nas opções de resultados

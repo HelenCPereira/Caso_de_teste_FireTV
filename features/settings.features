@@ -1,0 +1,20 @@
+
+Feature: Configurações de Perfil no Fire TV
+
+Scenario: Adicionar um novo perfil
+  Given que o Fire TV está ligado e na tela inicial
+  When eu navego até a seção "Perfil"
+  And eu seleciono "Adicionar perfil"
+  Then a tela com os perfis existentes deve aparecer
+  And deve haver uma opção para adicionar um novo perfil
+
+Scenario: Cancelar Registro 
+  Given que o Fire TV está ligado e na tela inicial
+  When eu navego até a seção "Perfil"
+  And eu seleciono um "Configurações de perfil"
+  And cancelo o resgisto do perfil existente
+  Then a tela de cancelar registro deve aparace com a mensagem explicando o que vai acontecer com a sua conta.
+
+
+
+

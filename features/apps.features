@@ -1,0 +1,13 @@
+Feature: Uso de aplicativos de streaming no Fire TV
+
+Scenario: Acessar o aplicativo Prime Video
+  Given que o Fire TV está ligado
+  When eu seleciono o ícone do Prime Video no menu de aplicativos
+  Then o aplicativo Prime Video deve abrir e carregar a tela inicial
+
+Scenario: Assistir a um vídeo no YouTube
+  Given que o aplicativo YouTube está aberto
+  When eu seleciono um vídeo da tela inicial
+  Then o vídeo deve começar a ser reproduzido
+
+  
